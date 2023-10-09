@@ -9,7 +9,7 @@ import api from '../../hooks/useFetch/api'
 interface HeaderProps {
     city?: string
     name?: string
-    main: DadosClimaticos
+    main?: DadosClimaticos
 }
 
 interface DadosClimaticos {
@@ -43,9 +43,9 @@ export default function Header({city}:HeaderProps){
     return (
         data ? (
             <>
-                <h1 className="header">{data?.name}</h1>
-                <h3 className="header">{data?.main.temp_max}</h3>
-                <h3 className="header">{data?.main.temp_min}</h3>
+                <h1 className="header">{data.name}</h1>
+                <h3 className="header">{data.main?.temp_max}</h3>
+                <h3 className="header">{data.main?.temp_min}</h3>
             </>
         ) : (
             <h1 className='teste'>Cidade não encontrada</h1>
