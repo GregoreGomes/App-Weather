@@ -20,12 +20,12 @@ export default function Search(){
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className='form' onSubmit={handleSubmit}>
                 <label htmlFor="cidade">Procure uma cidade</label>
-                <input type="text" name="cidade" id="" />
-                <button type="submit">Buscar</button>
+                <input className='input' type="text" name="cidade" id="" />
+                <button className='button' type="submit">Buscar</button>
             </form>
-            <Header city={inputCity}/>
+            <Header cityName={inputCity}/>
         </>
 
     )
