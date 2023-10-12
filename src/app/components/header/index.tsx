@@ -45,10 +45,12 @@ export default function Header({cityName}:HeaderProps){
                                 <p>{`Máx.: ${data.list[0].main.temp_max.toFixed(0)}°`}</p>
                                 <p>{`Min.: ${data.list[0].main.temp_min.toFixed(0)}°`}</p>
                             </div>
-
+                            
                             {/* {data.list.map(item => (
                                 <div key={item.dt}>
-                                    <p>Date Time: {item.main.temp}</p>
+                                   <Image width={100} height={100} src={`https://openweathermap.org/img/wn/${item.weather.map(e => (e.icon))}@2x.png`} alt={data.list[0].weather[0].description}/>
+                                    <p>{item.dt_txt}</p>
+                                    <p>{item.main.temp}</p>
                                 </div>
                             ))} */}
 
