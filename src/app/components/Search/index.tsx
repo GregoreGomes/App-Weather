@@ -3,7 +3,7 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import './styles.css'
 
-import Header from '../header';
+import Content from '../Content/index';
 
 export default function Search(){
 
@@ -21,11 +21,10 @@ export default function Search(){
     return (
         <>
             <form className='form' onSubmit={handleSubmit}>
-                <label htmlFor="cidade">Procure uma cidade</label>
                 <input className='input' type="text" name="cidade" id="" />
                 <button className='button' type="submit">Buscar</button>
             </form>
-            <Header cityName={inputCity}/>
+            <Content cityName={inputCity}/>
         </>
 
     )
