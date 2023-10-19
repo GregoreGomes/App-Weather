@@ -17,11 +17,6 @@ export function HeaderContent({city, list}: DataProps){
                     </div>
                 </div>
             </div>
-            
-        </div>
-        <div className='max-min days-details'>
-                <p>{`Máx.: ${list[0].main.temp_max.toFixed(0)}°`}</p>
-                <p>{`Min.: ${list[0].main.temp_min.toFixed(0)}°`}</p>
         </div>
     </div>
     )
